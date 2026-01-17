@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Dark Luxury Theme */
+  --background: 222 47% 11%; /* Dark Blue/Black */
+  --foreground: 210 40% 98%;
+  
+  --primary: 46 65% 52%; /* Gold #D4AF37 -> HSL approx 46 65% 52% */
+  --primary-foreground: 222 47% 11%;
+  
+  --secondary: 217 33% 17%; /* Lighter dark blue for cards */
+  --secondary-foreground: 210 40% 98%;
+  
+  --muted: 217 33% 25%;
+  --muted-foreground: 215 20% 65%;
+  
+  --accent: 46 65% 52%;
+  --accent-foreground: 222 47% 11%;
+  
+  --destructive: 0 62% 30%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 217 33% 20%;
+  --input: 217 33% 20%;
+  --ring: 46 65% 52%;
+
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Montserrat', sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased font-body overflow-x-hidden;
+    background-image: 
+      radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 100% 100%, rgba(212, 175, 55, 0.03) 0%, transparent 30%);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    @apply font-bold tracking-tight text-white;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary/30 rounded-full hover:bg-primary/50 transition-colors;
+  }
+}
+
+.text-gold {
+  color: hsl(var(--primary));
+}
+
+.bg-gold {
+  background-color: hsl(var(--primary));
+}
+
+.border-gold {
+  border-color: hsl(var(--primary));
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, #D4AF37 0%, #F5D061 50%, #D4AF37 100%);
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #D4AF37 0%, #F5D061 50%, #F8E7AD 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
