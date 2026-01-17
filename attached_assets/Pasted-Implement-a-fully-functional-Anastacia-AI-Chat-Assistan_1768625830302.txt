@@ -1,0 +1,41 @@
+Implement a fully functional 'Anastacia AI Chat Assistant' with Typing Support.
+
+I need a smart, floating chat widget visible on ALL pages of the website. Please write the HTML, CSS, and JavaScript to achieve the following:
+
+1. Layout & Positioning (CSS):
+
+Create a Floating Chat Button fixed to the Bottom-Right corner of the screen (position: fixed; bottom: 20px; right: 20px; z-index: 1000;).
+
+Design: A circular button using the brand's Gold/Yellow theme. Inside, place a 'Chat' or 'Robot' icon.
+
+Chat Window: A hidden chat box appearing just above the button when clicked. It should have a dark theme header ("Anastacia AI Assistant"), a message display area, and an input area at the bottom.
+
+2. Interactivity (HTML & JS):
+
+The chat window must contain an Input Field (type="text", placeholder="Type your question...") and a Send Button.
+
+Allow users to send messages by clicking "Send" OR pressing the "Enter" key.
+
+3. Intelligent Auto-Reply Logic (JavaScript): Implement a function to analyze the user's text (convert to lowercase) and reply based on these specific keywords:
+
+Rates/Pricing: If input contains price, rate, cost, or charges -> Reply: "My rates depend on the project type and length. Please contact me on WhatsApp for a custom quote!"
+
+Contact Info: If input contains contact, number, whatsapp, or email -> Reply: "You can reach me via WhatsApp at 076 65 11 237 or email ms.anastacia99@gmail.com."
+
+Services: If input contains service, hosting, voice, or work -> Reply: "I offer Event Hosting, Commercial Voice Overs, Dubbing, and Documentary Narration. Check out my Portfolio page!"
+
+Location: If input contains location, where, or place -> Reply: "I am based in Sri Lanka and available for island-wide events."
+
+Greetings: If input contains hello or hi -> Reply: "Hello! I'm Ms. Anastacia's virtual assistant. How can I help you with your voice-over or event needs?"
+
+4. Fallback Mechanism:
+
+If the user's input does not match any keywords above, return this specific reply with a clickable link:
+
+Reply: "I'm not sure about that, but I'd love to chat! <a href='https://wa.me/94766511237' target='_blank' style='color: #FFD700; text-decoration: underline;'>Click here to message me on WhatsApp</a>."
+
+5. User Experience:
+
+Ensure the chat auto-scrolls to the bottom when a new message is added.
+
+Show a "typing..." delay of 1 second before the bot replies to make it feel natural.
